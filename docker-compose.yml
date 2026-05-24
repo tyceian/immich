@@ -69,8 +69,8 @@ services:
       -c shared_buffers=512MB
       -c wal_compression=lz4
     restart: always
-    # bump this if postgres starts complaining about memory on my home server
-    mem_limit: 1g
+    # bumped from 1g to 1.5g after postgres kept OOMing during library scans
+    mem_limit: 1.5g
 
 volumes:
   model-cache:
