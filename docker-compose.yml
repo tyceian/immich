@@ -33,6 +33,8 @@ services:
     restart: always
     healthcheck:
       disable: false
+    # limit ML memory usage - on my machine it would occasionally balloon and cause issues
+    mem_limit: 2g
 
   redis:
     container_name: immich_redis
