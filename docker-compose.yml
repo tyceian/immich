@@ -71,7 +71,8 @@ services:
     restart: always
     # bumped from 1g to 1.5g after postgres kept OOMing during library scans
     # bumped again to 2g - still seeing occasional OOMs on my machine with ~80k photos
-    mem_limit: 2g
+    # bumped to 3g - now at ~120k photos and the OOMs were back, hopefully this holds
+    mem_limit: 3g
 
 volumes:
   model-cache:
