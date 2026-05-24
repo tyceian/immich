@@ -69,6 +69,8 @@ services:
       -c shared_buffers=512MB
       -c wal_compression=lz4
     restart: always
+    # bump this if postgres starts complaining about memory on my home server
+    mem_limit: 1g
 
 volumes:
   model-cache:
