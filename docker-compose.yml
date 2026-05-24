@@ -70,7 +70,8 @@ services:
       -c wal_compression=lz4
     restart: always
     # bumped from 1g to 1.5g after postgres kept OOMing during library scans
-    mem_limit: 1.5g
+    # bumped again to 2g - still seeing occasional OOMs on my machine with ~80k photos
+    mem_limit: 2g
 
 volumes:
   model-cache:
