@@ -75,7 +75,8 @@ services:
     # bumped again to 2g - still seeing occasional OOMs on my machine with ~80k photos
     # bumped to 3g - now at ~120k photos and the OOMs were back, hopefully this holds
     # bumped to 4g - hit ~150k photos and 3g wasn't cutting it anymore
-    mem_limit: 4g
+    # bumped to 6g - sitting at ~200k photos now, 4g wasn't enough on my NAS
+    mem_limit: 6g
 
 volumes:
   model-cache:
